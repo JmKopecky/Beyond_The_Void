@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " x ",
+    "xox",
+    " x "
+  ],
+  "key": {
+    "x": {
+      "item": "minecraft:ender_eye"
+    },
+    "o": {
+      "item": "minecraft:dragon_breath"
+    }
+  },
+  "result": {
+    "item": "beyondthevoid:void_focus",
+    "count": 1
+  }
+}
+
+
