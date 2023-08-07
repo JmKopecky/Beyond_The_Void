@@ -21,6 +21,7 @@ public class BlocksRegistry {
 
 
     public static ToIntFunction<BlockState> lightLevel15 = BlockState -> 15;
+    public static ToIntFunction<BlockState> lightLevel13 = BlockState -> 13;
     public static ToIntFunction<BlockState> lightLevel10 = BlockState -> 10;
 
 
@@ -34,8 +35,18 @@ public class BlocksRegistry {
     public static final RegistryObject<Item> VOID_RIFT_PEDESTAL_ITEM = BLOCKITEMS.register("void_rift_pedestal_item",
             () -> new BlockItem(VOID_RIFT_PEDESTAL.get(), new Item.Properties().tab(CreativeTabs.BEYONDTHEVOIDTAB)));
 
+    public static final RegistryObject<Block> SCULK_LOG = BLOCKS.register("sculk_log",
+            () -> new Block(BlockBehaviour.Properties.of(Material.WOOD).strength(2.5f, 3.0f)));
+    public static final RegistryObject<Item> SCULK_LOG_ITEM = BLOCKITEMS.register("sculk_log_item",
+            () -> new BlockItem(SCULK_LOG.get(), new Item.Properties().tab(CreativeTabs.BEYONDTHEVOIDTAB)));
+
     public static final RegistryObject<Block> SCULK_PLANKS = BLOCKS.register("sculk_planks",
             () -> new Block(BlockBehaviour.Properties.of(Material.WOOD).strength(2.5f, 3.0f)));
     public static final RegistryObject<Item> SCULK_PLANKS_ITEM = BLOCKITEMS.register("sculk_planks_item",
             () -> new BlockItem(SCULK_PLANKS.get(), new Item.Properties().tab(CreativeTabs.BEYONDTHEVOIDTAB)));
+    //tree in a lit up biome, all things glow/emit light.
+    public static final RegistryObject<Block> ACTIVATED_SCULK_LOG = BLOCKS.register("activated_sculk_log",
+            () -> new Block(BlockBehaviour.Properties.of(Material.WOOD).strength(2.5f, 3.0f).lightLevel(lightLevel13)));
+    public static final RegistryObject<Item> ACTIVATED_SCULK_LOG_ITEM = BLOCKITEMS.register("activated_sculk_log_item",
+            () -> new BlockItem(ACTIVATED_SCULK_LOG.get(), new Item.Properties().tab(CreativeTabs.BEYONDTHEVOIDTAB)));
 }

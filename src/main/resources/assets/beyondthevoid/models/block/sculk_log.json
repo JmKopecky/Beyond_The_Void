@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "beyondthevoid:block/sculk_log_top",
+    "side": "beyondthevoid:block/sculk_log"
+  }
+}

@@ -1,6 +1,8 @@
 {
   "replace": false,
   "values": [
-    "beyondthevoid:sculk_planks"
+    "beyondthevoid:sculk_planks",
+    "beyondthevoid:sculk_log",
+    "beyondthevoid:activated_sculk_log"
   ]
 }

@@ -2,6 +2,8 @@
   "block.beyondthevoid.void_rift_core": "Void Rift Core",
   "block.beyondthevoid.void_rift_pedestal": "Void Rift Pedestal",
   "block.beyondthevoid.sculk_planks": "Sculk Planks",
+  "block.beyondthevoid.sculk_log": "Sculk Log",
+  "block.beyondthevoid.activated_sculk_log": "Activated Sculk Log",
   "item.beyondthevoid.sonic_core": "Sonic Core",
   "item.beyondthevoid.ancient_focus": "Ancient Focus",
   "item.beyondthevoid.void_focus": "Void Focus",
