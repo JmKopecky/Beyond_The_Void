@@ -25,7 +25,7 @@ public class BlocksRegistry {
 
 
     public static final RegistryObject<Block> VOID_RIFT_CORE = BLOCKS.register("void_rift_core",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(5.0f).lightLevel(lightLevel15)));
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(5.0f).noOcclusion().lightLevel(lightLevel15)));
     public static final RegistryObject<Item> VOID_RIFT_CORE_ITEM = BLOCKITEMS.register("void_rift_core_item",
             () -> new BlockItem(VOID_RIFT_CORE.get(), new Item.Properties().tab(CreativeTabs.BEYONDTHEVOIDTAB)));
 

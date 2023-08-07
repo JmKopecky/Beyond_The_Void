@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "xax",
+    "xox",
+    " x "
+  ],
+  "key": {
+    "x": {
+      "item": "minecraft:end_stone_bricks"
+    },
+    "o": {
+      "item": "beyondthevoid:void_focus"
+    },
+    "a": {
+      "item": "minecraft:dragon_breath"
+    }
+  },
+  "result": {
+    "item": "beyondthevoid:void_rift_core_item",
+    "count": 1
+  }
+}
