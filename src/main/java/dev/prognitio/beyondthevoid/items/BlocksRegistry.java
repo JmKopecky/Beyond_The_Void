@@ -9,6 +9,7 @@ import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.Material;
+import net.minecraft.world.level.material.MaterialColor;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -35,6 +36,11 @@ public class BlocksRegistry {
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(5.0f).noOcclusion().lightLevel(lightLevel10)));
     public static final RegistryObject<Item> VOID_RIFT_PEDESTAL_ITEM = BLOCKITEMS.register("void_rift_pedestal_item",
             () -> new BlockItem(VOID_RIFT_PEDESTAL.get(), new Item.Properties().tab(CreativeTabs.BEYONDTHEVOIDTAB)));
+
+    public static final RegistryObject<Block> SCULK_STONE = BLOCKS.register("sculk_stone",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_BLUE).strength(2.25f, 7.0f)));
+    public static final RegistryObject<Item> SCULK_STONE_ITEM = BLOCKITEMS.register("sculk_stone_item",
+            () -> new BlockItem(SCULK_STONE.get(), new Item.Properties().tab(CreativeTabs.BEYONDTHEVOIDTAB)));
 
     public static final RegistryObject<Block> SCULK_LOG = BLOCKS.register("sculk_log",
             () -> new RotatedPillarBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(2.5f, 3.0f)));
