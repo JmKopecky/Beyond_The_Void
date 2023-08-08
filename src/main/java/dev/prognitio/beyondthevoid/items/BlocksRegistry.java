@@ -5,6 +5,7 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.Material;
@@ -36,7 +37,7 @@ public class BlocksRegistry {
             () -> new BlockItem(VOID_RIFT_PEDESTAL.get(), new Item.Properties().tab(CreativeTabs.BEYONDTHEVOIDTAB)));
 
     public static final RegistryObject<Block> SCULK_LOG = BLOCKS.register("sculk_log",
-            () -> new Block(BlockBehaviour.Properties.of(Material.WOOD).strength(2.5f, 3.0f)));
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(2.5f, 3.0f)));
     public static final RegistryObject<Item> SCULK_LOG_ITEM = BLOCKITEMS.register("sculk_log_item",
             () -> new BlockItem(SCULK_LOG.get(), new Item.Properties().tab(CreativeTabs.BEYONDTHEVOIDTAB)));
 
@@ -46,7 +47,7 @@ public class BlocksRegistry {
             () -> new BlockItem(SCULK_PLANKS.get(), new Item.Properties().tab(CreativeTabs.BEYONDTHEVOIDTAB)));
     //tree in a lit up biome, all things glow/emit light.
     public static final RegistryObject<Block> ACTIVATED_SCULK_LOG = BLOCKS.register("activated_sculk_log",
-            () -> new Block(BlockBehaviour.Properties.of(Material.WOOD).strength(2.5f, 3.0f).lightLevel(lightLevel13)));
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(2.5f, 3.0f).lightLevel(lightLevel13)));
     public static final RegistryObject<Item> ACTIVATED_SCULK_LOG_ITEM = BLOCKITEMS.register("activated_sculk_log_item",
             () -> new BlockItem(ACTIVATED_SCULK_LOG.get(), new Item.Properties().tab(CreativeTabs.BEYONDTHEVOIDTAB)));
 }

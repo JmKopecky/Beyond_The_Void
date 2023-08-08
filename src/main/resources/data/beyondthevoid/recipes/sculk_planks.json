@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "beyondthevoid:sculk_log_item"
+    }
+  ],
+  "result": {
+    "item": "beyondthevoid:sculk_planks_item",
+    "count": 4
+  }
+}

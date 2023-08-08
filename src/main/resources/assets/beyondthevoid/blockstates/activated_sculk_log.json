@@ -1,5 +1,16 @@
 {
   "variants": {
-    "": { "model": "beyondthevoid:block/activated_sculk_log"}
+    "axis=x": {
+      "model": "beyondthevoid:block/activated_sculk_log_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "beyondthevoid:block/activated_sculk_log"
+    },
+    "axis=z": {
+      "model": "beyondthevoid:block/activated_sculk_log_horizontal",
+      "x": 90
+    }
   }
 }
