@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "beyondthevoid:block/revitalized_sculklight_rose"
+  },
+  "render_type": "cutout"
+}

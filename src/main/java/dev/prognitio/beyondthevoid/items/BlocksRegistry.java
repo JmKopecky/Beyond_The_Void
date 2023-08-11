@@ -33,6 +33,7 @@ public class BlocksRegistry {
     public static ToIntFunction<BlockState> lightLevel15 = BlockState -> 15;
     public static ToIntFunction<BlockState> lightLevel13 = BlockState -> 13;
     public static ToIntFunction<BlockState> lightLevel10 = BlockState -> 10;
+    public static ToIntFunction<BlockState> lightLevel5 = BlockState -> 5;
 
 
     public static final RegistryObject<Block> VOID_RIFT_CORE = BLOCKS.register("void_rift_core", () -> new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(5.0f).noOcclusion().lightLevel(lightLevel15)));
@@ -168,11 +169,16 @@ public class BlocksRegistry {
     public static final RegistryObject<Block> ACTIVATED_SCULK_SAPLING = BLOCKS.register("activated_sculk_sapling", () -> new SaplingBlock(new ActivatedSculkTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
     public static final RegistryObject<Item> ACTIVATED_SCULK_SAPLING_ITEM = defaultItem("activated_sculk_sapling", ACTIVATED_SCULK_SAPLING);
 
-    public static final RegistryObject<Block> SCULKLIGHT_ROSE = BLOCKS.register("sculklight_rose", () -> new FlowerBlock(MobEffects.DARKNESS, 5, BlockBehaviour.Properties.copy(Blocks.DANDELION)));
+    public static final RegistryObject<Block> SCULKLIGHT_ROSE = BLOCKS.register("sculklight_rose", () -> new FlowerBlock(MobEffects.DARKNESS, 5, BlockBehaviour.Properties.copy(Blocks.DANDELION).lightLevel(lightLevel5)));
     public static final RegistryObject<Item> SCULKLIGHT_ROSE_ITEM = defaultItem("sculklight_rose", SCULKLIGHT_ROSE);
 
-    public static final RegistryObject<Block> POTTED_SCULKLIGHT_ROSE = BLOCKS.register("potted_sculklight_rose", () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), SCULKLIGHT_ROSE, BlockBehaviour.Properties.copy(Blocks.DANDELION)));
-    public static final RegistryObject<Item> POTTED_SCULKLIGHT_ROSE_ITEM = defaultItem("potted_sculklight_rose", POTTED_SCULKLIGHT_ROSE);
+    public static final RegistryObject<Block> POTTED_SCULKLIGHT_ROSE = BLOCKS.register("potted_sculklight_rose", () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), SCULKLIGHT_ROSE, BlockBehaviour.Properties.copy(Blocks.DANDELION).lightLevel(lightLevel5)));
+    //public static final RegistryObject<Item> POTTED_SCULKLIGHT_ROSE_ITEM = defaultItem("potted_sculklight_rose", POTTED_SCULKLIGHT_ROSE);
+
+    public static final RegistryObject<Block> REVITALIZED_SCULKLIGHT_ROSE = BLOCKS.register("revitalized_sculklight_rose", () -> new FlowerBlock(MobEffects.GLOWING, 5, BlockBehaviour.Properties.copy(Blocks.DANDELION).lightLevel(lightLevel10)));
+    public static final RegistryObject<Item> REVITALIZED_SCULKLIGHT_ROSE_ITEM = defaultItem("revitalized_sculklight_rose", REVITALIZED_SCULKLIGHT_ROSE);
+
+    public static final RegistryObject<Block> POTTED_REVITALIZED_SCULKLIGHT_ROSE = BLOCKS.register("potted_revitalized_sculklight_rose", () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), REVITALIZED_SCULKLIGHT_ROSE, BlockBehaviour.Properties.copy(Blocks.DANDELION).lightLevel(lightLevel10)));
 
 
     private static RegistryObject<Item> defaultItem(String itemname, RegistryObject<Block> block) {

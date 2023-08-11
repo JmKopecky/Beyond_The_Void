@@ -61,7 +61,10 @@ public class BeyondTheVoid
         // Some common setup code
 
         event.enqueueWork(() -> {
-            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(BlocksRegistry.SCULKLIGHT_ROSE.getId(), BlocksRegistry.POTTED_SCULKLIGHT_ROSE);
+            FlowerPotBlock registerFlowers = (FlowerPotBlock) Blocks.FLOWER_POT;
+            registerFlowers.addPlant(BlocksRegistry.SCULKLIGHT_ROSE.getId(), BlocksRegistry.POTTED_SCULKLIGHT_ROSE);
+            registerFlowers.addPlant(BlocksRegistry.REVITALIZED_SCULKLIGHT_ROSE.getId(), BlocksRegistry.POTTED_REVITALIZED_SCULKLIGHT_ROSE);
+
         });
     }
 
