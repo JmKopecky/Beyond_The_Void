@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "beyondthevoid:block/activated_sculk_sapling"
+  }
+}

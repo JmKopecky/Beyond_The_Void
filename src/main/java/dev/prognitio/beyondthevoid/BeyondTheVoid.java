@@ -3,12 +3,16 @@ package dev.prognitio.beyondthevoid;
 import com.mojang.logging.LogUtils;
 import dev.prognitio.beyondthevoid.items.BlocksRegistry;
 import dev.prognitio.beyondthevoid.items.ItemsRegistry;
+import dev.prognitio.beyondthevoid.world.feature.ConfiguredFeatures;
+import dev.prognitio.beyondthevoid.world.feature.CustomFeatures;
+import dev.prognitio.beyondthevoid.world.feature.PlacedFeatures;
 import net.minecraft.client.Minecraft;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
 import net.minecraftforge.api.distmarker.Dist;
@@ -44,6 +48,9 @@ public class BeyondTheVoid
         ItemsRegistry.ITEMS.register(modEventBus);
         BlocksRegistry.BLOCKS.register(modEventBus);
         BlocksRegistry.BLOCKITEMS.register(modEventBus);
+        CustomFeatures.FEATURES_REGISTER.register(modEventBus);
+        ConfiguredFeatures.CONFIG_FEATURES.register(modEventBus);
+        PlacedFeatures.PLACED_FEATURES.register(modEventBus);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
@@ -53,6 +60,9 @@ public class BeyondTheVoid
     {
         // Some common setup code
 
+        event.enqueueWork(() -> {
+            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(BlocksRegistry.SCULKLIGHT_ROSE.getId(), BlocksRegistry.POTTED_SCULKLIGHT_ROSE);
+        });
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call

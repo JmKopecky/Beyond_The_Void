@@ -17,6 +17,42 @@
             "depth": 0,
             "offset": 0
           }
+        },
+        {
+          "biome": "beyondthevoid:dense_sculk_forest",
+          "parameters": {
+            "temperature": 1,
+            "humidity": 0,
+            "continentalness": 0,
+            "erosion": 0,
+            "weirdness": 0,
+            "depth": 0,
+            "offset": 0
+          }
+        },
+        {
+          "biome": "beyondthevoid:sparse_sculk_forest",
+          "parameters": {
+            "temperature": -1,
+            "humidity": 0,
+            "continentalness": 0,
+            "erosion": 0,
+            "weirdness": 0,
+            "depth": 0,
+            "offset": 0
+          }
+        },
+        {
+          "biome": "beyondthevoid:activated_sculk_forest",
+          "parameters": {
+            "temperature": 0,
+            "humidity": 1,
+            "continentalness": 0,
+            "erosion": 0,
+            "weirdness": 0,
+            "depth": 0,
+            "offset": 0
+          }
         }
       ]
     }

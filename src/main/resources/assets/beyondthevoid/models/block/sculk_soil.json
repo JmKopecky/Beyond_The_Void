@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "beyondthevoid:block/sculk_soil_bottom",
+    "east": "beyondthevoid:block/sculk_soil_side",
+    "north": "beyondthevoid:block/sculk_soil_side",
+    "particle": "beyondthevoid:block/sculk_soil",
+    "south": "beyondthevoid:block/sculk_soil_side",
+    "up": "beyondthevoid:block/sculk_soil",
+    "west": "beyondthevoid:block/sculk_soil_side"
+  }
+}

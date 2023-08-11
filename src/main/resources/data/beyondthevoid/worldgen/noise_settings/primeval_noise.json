@@ -24,12 +24,36 @@
     "fluid_level_floodedness": 0,
     "fluid_level_spread": 0,
     "lava": 0,
-    "temperature": 0,
-    "vegetation": 0,
-    "continents": 0,
-    "erosion": 0,
-    "depth": 0,
-    "ridges": 0,
+    "temperature": {
+      "type": "minecraft:noise",
+      "noise": "beyondthevoid:biome_paramater_noise_1",
+      "xz_scale": 1,
+      "y_scale": 0
+    },
+    "vegetation": {
+      "type": "minecraft:noise",
+      "noise": "beyondthevoid:biome_paramater_noise_2",
+      "xz_scale": 1,
+      "y_scale": 0
+    },
+    "continents": {
+      "type": "minecraft:noise",
+      "noise": "beyondthevoid:biome_paramater_noise_3",
+      "xz_scale": 1,
+      "y_scale": 0
+    },
+    "erosion": {
+      "type": "minecraft:interpolated",
+      "argument": "minecraft:overworld/erosion"
+    },
+    "depth": {
+      "type": "minecraft:interpolated",
+      "argument": "minecraft:overworld/depth"
+    },
+    "ridges": {
+      "type": "minecraft:interpolated",
+      "argument": "minecraft:overworld/ridges"
+    },
     "initial_density_without_jaggedness": 0,
     "final_density": {
       "type": "minecraft:interpolated",
@@ -63,7 +87,7 @@
           "then_run": {
             "type": "minecraft:block",
             "result_state": {
-              "Name": "minecraft:sculk"
+              "Name": "beyondthevoid:sculk_soil"
             }
           }
         }
@@ -71,3 +95,4 @@
     ]
   }
 }
+
