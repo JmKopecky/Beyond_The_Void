@@ -10,6 +10,8 @@ import dev.prognitio.beyondthevoid.world.feature.CustomFeatures;
 import dev.prognitio.beyondthevoid.world.feature.PlacedFeatures;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.entity.EntityRenderers;
+import net.minecraft.world.entity.SpawnPlacements;
+import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
@@ -17,6 +19,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.material.Material;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -70,6 +73,7 @@ public class BeyondTheVoid
         // Some common setup code
 
         event.enqueueWork(() -> {
+            SpawnPlacements.register(EntityTypes.ANCIENT_KNIGHT.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, Monster::checkMonsterSpawnRules);
             FlowerPotBlock registerFlowers = (FlowerPotBlock) Blocks.FLOWER_POT;
             registerFlowers.addPlant(BlocksRegistry.SCULKLIGHT_ROSE.getId(), BlocksRegistry.POTTED_SCULKLIGHT_ROSE);
             registerFlowers.addPlant(BlocksRegistry.REVITALIZED_SCULKLIGHT_ROSE.getId(), BlocksRegistry.POTTED_REVITALIZED_SCULKLIGHT_ROSE);

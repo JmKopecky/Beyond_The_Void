@@ -8,12 +8,19 @@
     "water_color": 4159204,
     "water_fog_color": 329011
   },
-  "spawners": {},
+  "spawners": {
+    "monster": [
+      {
+        "type": "beyondthevoid:ancient_knight",
+        "weight": 1,
+        "minCount": 0,
+        "maxCount": 0
+      }
+    ]
+  },
   "spawn_costs": {},
   "carvers": {},
   "features": [
-    [
-
-    ]
+    []
   ]
 }

@@ -38,7 +38,8 @@ public class AncientKnight extends Monster implements IAnimatable {
                 .add(Attributes.ATTACK_DAMAGE, 10)
                 .add(Attributes.ATTACK_SPEED, 0.7f)
                 .add(Attributes.MOVEMENT_SPEED, 0.2f)
-                .add(Attributes.KNOCKBACK_RESISTANCE, 1).build();
+                .add(Attributes.KNOCKBACK_RESISTANCE, 1)
+                .add(Attributes.FOLLOW_RANGE, 64).build();
     }
 
     @Override

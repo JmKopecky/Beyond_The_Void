@@ -1,12 +1,11 @@
-Primeval Dimension Biomes:
-Sculk-related ones: Should be dark, use dark sky, fog, and water, along with darker blocks (and denser fog?)
-    Mountains:
-        Dramatic Sculk Peaks
-        Sculk mountains
-        Sculk hills
-    Forest:
-        Dense Sculk Forest
-        Sparse Sculk Forest
-    Plains:
-        Sculk Plains
-More?
+Structures:
+
+Final Boss Structure for Primeval Dimension
+
+Leutanant Structure, 2nd to final structure
+
+Various structures for Ancient Chiefs (boss battles)
+
+Misc other structures
+
+Ancient Outposts: structures without a boss, similar to pillager outposts.
