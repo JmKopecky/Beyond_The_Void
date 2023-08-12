@@ -42,8 +42,14 @@ public class BlocksRegistry {
     public static final RegistryObject<Block> VOID_RIFT_PEDESTAL = BLOCKS.register("void_rift_pedestal", () -> new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(5.0f).noOcclusion().lightLevel(lightLevel10)));
     public static final RegistryObject<Item> VOID_RIFT_PEDESTAL_ITEM = defaultItem("void_rift_pedestal", VOID_RIFT_PEDESTAL);
 
+    public static final RegistryObject<Block> DARK_LANTERN = BLOCKS.register("dark_lantern", () -> new LanternBlock(BlockBehaviour.Properties.copy(Blocks.LANTERN).lightLevel(lightLevel13)));
+    public static final RegistryObject<Item> DARK_LANTERN_ITEM = defaultItem("dark_lantern", DARK_LANTERN);
+
     public static final RegistryObject<Block> SCULK_STONE = BLOCKS.register("sculk_stone", () -> new Block(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_BLUE).strength(2.25f, 7.0f)));
     public static final RegistryObject<Item> SCULK_STONE_ITEM = defaultItem("sculk_stone", SCULK_STONE);
+
+    public static final RegistryObject<Block> SCULK_STONE_BRICKS = BLOCKS.register("sculk_stone_bricks", () -> new Block(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_BLUE).strength(2.25f, 7.0f)));
+    public static final RegistryObject<Item> SCULK_STONE_BRICKS_ITEM = defaultItem("sculk_stone_bricks", SCULK_STONE_BRICKS);
 
     public static final RegistryObject<Block> SCULK_SOIL = BLOCKS.register("sculk_soil", () -> new Block(BlockBehaviour.Properties.of(Material.DIRT, MaterialColor.COLOR_BLUE).strength(1.75f, 6.0f)));
     public static final RegistryObject<Item> SCULK_SOIL_ITEM = defaultItem("sculk_soil", SCULK_SOIL);
@@ -181,10 +187,39 @@ public class BlocksRegistry {
     public static final RegistryObject<Block> POTTED_REVITALIZED_SCULKLIGHT_ROSE = BLOCKS.register("potted_revitalized_sculklight_rose", () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), REVITALIZED_SCULKLIGHT_ROSE, BlockBehaviour.Properties.copy(Blocks.DANDELION).lightLevel(lightLevel10)));
 
 
-    private static RegistryObject<Item> defaultItem(String itemname, RegistryObject<Block> block) {
+    public static RegistryObject<Item> defaultItem(String itemname, RegistryObject<Block> block) {
         RegistryObject<Item> output = null;
         output = BLOCKITEMS.register(itemname + "_item", () -> new BlockItem(block.get(), new Item.Properties().tab(CreativeTabs.BEYONDTHEVOIDTAB)));
         return output;
     }
+
+
+
+
+    //stone stairs, slabs, and walls
+    public static RegistryObject<Block> SCULK_STONE_BRICK_STAIR = BLOCKS.register("sculk_stone_brick_stair",
+            () -> new StairBlock(() -> SCULK_STONE_BRICKS.get().defaultBlockState(), BlockBehaviour.Properties.copy(SCULK_STONE_BRICKS.get())));
+    public static RegistryObject<Item> SCULK_STONE_BRICK_STAIR_ITEM = defaultItem("sculk_stone_brick_stair", SCULK_STONE_BRICK_STAIR);
+    public static final RegistryObject<Block> SCULK_STONE_BRICK_SLAB = BLOCKS.register("sculk_stone_brick_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(SCULK_STONE_BRICKS.get())));
+    public static RegistryObject<Item> SCULK_STONE_BRICK_SLAB_ITEM = defaultItem("sculk_stone_brick_slab", SCULK_STONE_BRICK_SLAB);
+    public static final RegistryObject<Block> SCULK_STONE_BRICK_WALL = BLOCKS.register("sculk_stone_brick_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(SCULK_STONE_BRICKS.get())));
+    public static RegistryObject<Item> SCULK_STONE_BRICK_WALL_ITEM = defaultItem("sculk_stone_brick_wall", SCULK_STONE_BRICK_WALL);
+
+    //wood stairs, slabs, fences, etc
+    public static RegistryObject<Block> SCULK_STAIR = BLOCKS.register("sculk_stair",
+            () -> new StairBlock(() -> SCULK_PLANKS.get().defaultBlockState(), BlockBehaviour.Properties.copy(SCULK_PLANKS.get())));
+    public static RegistryObject<Item> SCULK_STAIR_ITEM = defaultItem("sculk_stair", SCULK_STAIR);
+    public static final RegistryObject<Block> SCULK_SLAB = BLOCKS.register("sculk_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(SCULK_PLANKS.get())));
+    public static RegistryObject<Item> SCULK_SLAB_ITEM = defaultItem("sculk_slab", SCULK_SLAB);
+    public static final RegistryObject<Block> SCULK_FENCE = BLOCKS.register("sculk_fence",
+            () -> new FenceBlock(BlockBehaviour.Properties.copy(SCULK_PLANKS.get())));
+    public static RegistryObject<Item> SCULK_FENCE_ITEM = defaultItem("sculk_fence", SCULK_FENCE);
+    public static final RegistryObject<Block> SCULK_FENCE_GATE = BLOCKS.register("sculk_fence_gate",
+            () -> new FenceGateBlock(BlockBehaviour.Properties.copy(SCULK_PLANKS.get())));
+    public static RegistryObject<Item> SCULK_FENCE_GATE_ITEM = defaultItem("sculk_fence_gate", SCULK_FENCE_GATE);
+
 
 }

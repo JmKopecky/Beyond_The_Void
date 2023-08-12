@@ -1,7 +1,9 @@
 package dev.prognitio.beyondthevoid.items;
 
 import dev.prognitio.beyondthevoid.BeyondTheVoid;
+import dev.prognitio.beyondthevoid.entity.EntityTypes;
 import net.minecraft.world.item.Item;
+import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -19,4 +21,9 @@ public class ItemsRegistry {
     //focus used in creation of portal building block
     public static final RegistryObject<Item> VOID_FOCUS = ITEMS.register(
             "void_focus", () -> new Item(new Item.Properties().tab(CreativeTabs.BEYONDTHEVOIDTAB)));
+
+    public static final RegistryObject<Item> ANCIENT_KNIGHT_SPAWN_EGG = ITEMS.register(
+            "ancient_knight_spawn_egg", () -> new ForgeSpawnEggItem(EntityTypes.ANCIENT_KNIGHT, 0x06002a, 0x050311, new Item.Properties().tab(CreativeTabs.BEYONDTHEVOIDTAB)));
+
+
 }

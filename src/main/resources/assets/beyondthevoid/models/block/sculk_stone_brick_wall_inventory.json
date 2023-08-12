@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/wall_inventory",
+  "textures": {
+    "wall": "beyondthevoid:block/sculk_stone_bricks"
+  }
+}

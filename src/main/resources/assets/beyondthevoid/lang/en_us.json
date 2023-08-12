@@ -2,21 +2,35 @@
   "block.beyondthevoid.void_rift_core": "Void Rift Core",
   "block.beyondthevoid.void_rift_pedestal": "Void Rift Pedestal",
   "block.beyondthevoid.sculk_planks": "Sculk Planks",
+  "block.beyondthevoid.sculk_stair": "Sculk Stair",
+  "block.beyondthevoid.sculk_slab": "Sculk Slab",
+  "block.beyondthevoid.sculk_fence": "Sculk Fence",
+  "block.beyondthevoid.sculk_fence_gate": "Sculk Fence Gate",
   "block.beyondthevoid.sculk_log": "Sculk Log",
   "block.beyondthevoid.activated_sculk_log": "Activated Sculk Log",
   "block.beyondthevoid.sculk_stone": "Sculk Stone",
+  "block.beyondthevoid.sculk_stone_bricks": "Sculk Stone Bricks",
+  "block.beyondthevoid.sculk_stone_brick_stair": "Sculk Stone Brick Stair",
+  "block.beyondthevoid.sculk_stone_brick_slab": "Sculk Stone Brick Slab",
+  "block.beyondthevoid.sculk_stone_brick_wall": "Sculk Stone Brick Wall",
   "block.beyondthevoid.sculk_leaves": "Sculk leaves",
   "block.beyondthevoid.sculk_soil": "Sculk Soil",
   "block.beyondthevoid.sculk_wood": "Sculk Wood",
   "block.beyondthevoid.activated_sculk_wood": "Activated Sculk Wood",
+  "block.beyondthevoid.dark_lantern": "Dark Lantern",
+
   "block.beyondthevoid.sculk_sapling": "Sculk Sapling",
   "block.beyondthevoid.activated_sculk_sapling": "Activated Sculk Sapling",
   "block.beyondthevoid.sculklight_rose": "Sculklight Rose",
   "block.beyondthevoid.potted_sculklight_rose": "Potted Sculklight Rose",
   "block.beyondthevoid.potted_revitalized_sculklight_rose": "Potted Revitalized Sculklight Rose",
   "block.beyondthevoid.revitalized_sculklight_rose": "Revitalized Sculklight Rose",
+
   "item.beyondthevoid.sonic_core": "Sonic Core",
   "item.beyondthevoid.ancient_focus": "Ancient Focus",
   "item.beyondthevoid.void_focus": "Void Focus",
-  "itemGroup.beyond_the_void_tab": "Beyond The Void"
+  "item.beyondthevoid.ancient_knight_spawn_egg": "Ancient Knight Spawn Egg",
+  "itemGroup.beyond_the_void_tab": "Beyond The Void",
+
+  "entity.beyondthevoid.ancient_knight": "Ancient Knight"
 }

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "beyondthevoid:block/sculk_stone_brick_slab"
+    },
+    "type=double": {
+      "model": "beyondthevoid:block/sculk_stone_bricks"
+    },
+    "type=top": {
+      "model": "beyondthevoid:block/sculk_stone_brick_slab_top"
+    }
+  }
+}

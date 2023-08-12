@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "hanging=false": {
+      "model": "beyondthevoid:block/dark_lantern"
+    },
+    "hanging=true": {
+      "model": "beyondthevoid:block/dark_lantern_hanging"
+    }
+  }
+}

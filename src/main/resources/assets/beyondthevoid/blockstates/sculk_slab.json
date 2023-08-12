@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "beyondthevoid:block/sculk_slab"
+    },
+    "type=double": {
+      "model": "beyondthevoid:block/sculk_planks"
+    },
+    "type=top": {
+      "model": "beyondthevoid:block/sculk_slab_top"
+    }
+  }
+}
