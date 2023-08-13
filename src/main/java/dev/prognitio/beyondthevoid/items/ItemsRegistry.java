@@ -25,5 +25,13 @@ public class ItemsRegistry {
     public static final RegistryObject<Item> ANCIENT_KNIGHT_SPAWN_EGG = ITEMS.register(
             "ancient_knight_spawn_egg", () -> new ForgeSpawnEggItem(EntityTypes.ANCIENT_KNIGHT, 0x06002a, 0x050311, new Item.Properties().tab(CreativeTabs.BEYONDTHEVOIDTAB)));
 
+    public static final RegistryObject<Item> TENEBRAE_INGOT = ITEMS.register(
+            "tenebrae_ingot", () -> new Item(new Item.Properties().tab(CreativeTabs.BEYONDTHEVOIDTAB)));
+
+    public static final RegistryObject<Item> VITALIZED_TENEBRAE_INGOT = ITEMS.register(
+            "vitalized_tenebrae_ingot", () -> new Item(new Item.Properties().tab(CreativeTabs.BEYONDTHEVOIDTAB)));
+
+    public static final RegistryObject<Item> VITALIZING_SAP = ITEMS.register(
+            "vitalizing_sap", () -> new Item(new Item.Properties().tab(CreativeTabs.BEYONDTHEVOIDTAB)));
 
 }

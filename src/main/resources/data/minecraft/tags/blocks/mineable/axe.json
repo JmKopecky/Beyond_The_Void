@@ -5,6 +5,10 @@
     "beyondthevoid:sculk_log",
     "beyondthevoid:activated_sculk_log",
     "beyondthevoid:sculk_wood",
-    "beyondthevoid:activated_sculk_wood"
+    "beyondthevoid:activated_sculk_wood",
+    "beyondthevoid:sculk_stair",
+    "beyondthevoid:sculk_slab",
+    "beyondthevoid:sculk_fence",
+    "beyondthevoid:sculk_fence_gate"
   ]
 }

@@ -34,12 +34,14 @@ public class AncientKnight extends Monster implements IAnimatable {
 
     public static AttributeSupplier setAttributes() {
         return Monster.createMobAttributes()
-                .add(Attributes.MAX_HEALTH, 100.00)
-                .add(Attributes.ATTACK_DAMAGE, 10)
+                .add(Attributes.MAX_HEALTH, 200.00)
+                .add(Attributes.ATTACK_DAMAGE, 15)
                 .add(Attributes.ATTACK_SPEED, 0.7f)
                 .add(Attributes.MOVEMENT_SPEED, 0.2f)
                 .add(Attributes.KNOCKBACK_RESISTANCE, 1)
-                .add(Attributes.FOLLOW_RANGE, 64).build();
+                .add(Attributes.FOLLOW_RANGE, 64)
+                .add(Attributes.ARMOR, 10)
+                .add(Attributes.ARMOR_TOUGHNESS, 4).build();
     }
 
     @Override

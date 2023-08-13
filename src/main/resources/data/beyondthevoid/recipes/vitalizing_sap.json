@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "beyondthevoid:revitalizing_sculklight_rose_item"
+    }
+  ],
+  "result": {
+    "item": "beyondthevoid:vitalizing_sap",
+    "count": 1
+  }
+}
