@@ -34,4 +34,12 @@ public class ItemsRegistry {
     public static final RegistryObject<Item> VITALIZING_SAP = ITEMS.register(
             "vitalizing_sap", () -> new Item(new Item.Properties().tab(CreativeTabs.BEYONDTHEVOIDTAB)));
 
+    public static final RegistryObject<Item> OBSIDIAN_NETHERITE_ALLOY = ITEMS.register(
+            "obsidian_netherite_alloy", () -> new Item(new Item.Properties().tab(CreativeTabs.BEYONDTHEVOIDTAB)));
+
+    public static final RegistryObject<Item> RAW_PRIMORDIAL_INGOT = ITEMS.register(
+            "raw_primordial_ingot", () -> new Item(new Item.Properties().tab(CreativeTabs.BEYONDTHEVOIDTAB)));
+
+    public static final RegistryObject<Item> PRIMORDIAL_INGOT = ITEMS.register(
+            "primordial_ingot", () -> new Item(new Item.Properties().tab(CreativeTabs.BEYONDTHEVOIDTAB)));
 }

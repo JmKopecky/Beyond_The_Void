@@ -9,3 +9,18 @@ Various structures for Ancient Chiefs (boss battles)
 Misc other structures
 
 Ancient Outposts: structures without a boss, similar to pillager outposts.
+
+
+Silent gear ideas:
+
+coating that makes any gear indestructible, using trait: indestructible
+
+lining that makes armor renew itself in durabililty, dropped from some mob
+
+Vitalized ingots should have the synergized trait
+
+Something with void ward would be nice (saves the player from the void)
+
+
+psionicly compressed primordial ingot (2nd dimension theme, find some in small quantities in the primeval)
+find raw ore, craft it with something to make the ingot.

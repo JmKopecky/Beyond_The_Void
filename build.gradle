@@ -124,9 +124,36 @@ repositories {
     //     dir 'libs'
     // }
 
+    def gpr_creds = {
+        username = property('gpr.username')
+        password = property('gpr.token')
+    }
+
+    maven {
+        // location of the maven that hosts JEI files
+        name = "Progwml6 maven"
+        url = "https://dvs1.progwml6.com/files/maven/"
+    }
+    maven {
+        // location of a maven mirror for JEI files, as a fallback
+        name = "ModMaven"
+        url = "https://modmaven.dev"
+    }
     maven {
         name = 'GeckoLib'
         url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/'
+    }
+    maven {
+        url = uri("https://maven.pkg.github.com/silentchaos512/silent-gear")
+        credentials gpr_creds
+    }
+    maven {
+        url = uri("https://maven.pkg.github.com/silentchaos512/silentlib")
+        credentials gpr_creds
+    }
+    maven {
+        url = uri("https://maven.pkg.github.com/silentchaos512/silent-utils")
+        credentials gpr_creds
     }
 }
 
@@ -137,8 +164,8 @@ dependencies {
     minecraft 'net.minecraftforge:forge:1.19.2-43.2.21'
 
     // Real mod deobf dependency examples - these get remapped to your current mappings
-    // compileOnly fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}:api") // Adds JEI API as a compile dependency
-    // runtimeOnly fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}") // Adds the full JEI mod as a runtime dependency
+    compileOnly fg.deobf("mezz.jei:jei-1.19.2-forge-api:11.5.0.297") // Adds JEI API as a compile dependency
+    runtimeOnly fg.deobf("mezz.jei:jei-1.19.2-forge:11.5.0.297") // Adds the full JEI mod as a runtime dependency
     // implementation fg.deobf("com.tterrag.registrate:Registrate:MC${mc_version}-${registrate_version}") // Adds registrate as a dependency
 
     // Examples using mod jars from ./libs
@@ -149,6 +176,24 @@ dependencies {
     // http://www.gradle.org/docs/current/userguide/dependency_management.html
 
     implementation fg.deobf('software.bernie.geckolib:geckolib-forge-1.19:3.1.40')
+
+
+    implementation fg.deobf("net.silentchaos512:silent-gear:1.19.2-3.2.5") {
+        exclude module: 'forge'
+        exclude module: 'curios-forge'
+        exclude module: 'jei-1.19.2-forge'
+        exclude module: 'silent-lib'
+    }
+
+
+    // Same as before, VERSION is in the form "MC_VERSION-MOD_VERSION" (eg, 1.18.2-6.+)
+    // https://github.com/SilentChaos512/silentlib/packages
+    implementation fg.deobf("net.silentchaos512:silent-lib:1.19.2-7.0.3") {
+        exclude module: "forge"
+    }
+
+
+
 }
 
 // Example for how to get properties into the manifest for reading at runtime.

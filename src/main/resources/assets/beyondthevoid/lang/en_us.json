@@ -32,7 +32,10 @@
   "item.beyondthevoid.ancient_knight_spawn_egg": "Ancient Knight Spawn Egg",
   "item.beyondthevoid.tenebrae_ingot": "Tenebrae Ingot",
   "item.beyondthevoid.vitalized_tenebrae_ingot": "Vitalized Tenebrae Ingot",
+  "item.beyondthevoid.obsidian_netherite_alloy": "Obsidian-Netherite Alloy",
   "item.beyondthevoid.vitalizing_sap": "Vitalizing Sap",
+  "item.beyondthevoid.raw_primordial_ingot": "Raw Primordial Ingot",
+  "item.beyondthevoid.primordial_ingot": "Primordial Ingot",
   "itemGroup.beyond_the_void_tab": "Beyond The Void",
 
   "entity.beyondthevoid.ancient_knight": "Ancient Knight"
