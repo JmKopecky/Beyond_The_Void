@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "beyondthevoid:sculk_stone_bricks_item"
+    }
+  },
+  "result": {
+    "item": "beyondthevoid:sculk_stone_brick_wall_item",
+    "count": 6
+  }
+}
