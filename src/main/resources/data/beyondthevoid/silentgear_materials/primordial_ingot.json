@@ -12,49 +12,49 @@
   },
   "crafting_items": {
     "main": {
-      "item": "beyondthevoid:tenebrae_ingot"
+      "item": "beyondthevoid:primordial_ingot"
     }
   },
   "name": {
-    "text": "Tenebrae Ingot"
+    "text": "Primordial Ingot"
   },
   "stats": {
     "main": {
-      "durability": 4250,
-      "armor_durability": 80,
-      "enchantability": 17.0,
-      "rarity": 92,
+      "durability": 5855,
+      "armor_durability": 100,
+      "enchantability": 50,
+      "rarity": 125,
       "chargeability": 1.2,
       "harvest_level": 5.0,
-      "harvest_speed": 12.0,
-      "melee_damage": 10.5,
+      "harvest_speed": 20.0,
+      "melee_damage": 16,
       "magic_damage": 0.0,
-      "attack_speed": 0.2,
-      "ranged_damage": 1.2,
-      "ranged_speed": 1.2,
-      "armor": 30.0,
-      "armor_toughness": 15.0,
-      "magic_armor": 1.0,
-      "knockback_resistance": 1.0
+      "attack_speed": 0.275,
+      "ranged_damage": 1.5,
+      "ranged_speed": 1.5,
+      "armor": 40.0,
+      "armor_toughness": 20.0,
+      "magic_armor": 12.0,
+      "knockback_resistance": 6.0
     }
   },
   "traits": {
     "main": [
       {
-        "name": "silentgear:sturdy",
-        "level": 2
+        "name": "silentgear:synergistic",
+        "level": 3
       },
       {
         "name": "silentgear:chilled",
-        "level": 2
+        "level": 3
       },
       {
         "name": "silentgear:ancient",
-        "level": 1
+        "level": 4
       },
       {
-        "name": "silentgear:adamant",
-        "level": 1
+        "name": "silentgear:sturdy",
+        "level": 5
       }
     ]
   },
@@ -62,7 +62,7 @@
     "main/all": [
       {
         "texture": "silentgear:main_generic_hc",
-        "color": "#01004B"
+        "color": "#04246F"
       },
       {
         "texture": "silentgear:_highlight"
@@ -71,7 +71,7 @@
     "main/fragment": [
       {
         "texture": "silentgear:metal",
-        "color": "#01004B"
+        "color": "#04246F"
       }
     ]
   }

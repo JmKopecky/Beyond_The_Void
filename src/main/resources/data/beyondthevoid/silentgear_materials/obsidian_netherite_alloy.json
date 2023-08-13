@@ -2,7 +2,7 @@
   "type": "silentgear:standard",
   "simple": true,
   "availability": {
-    "tier": 4,
+    "tier": 3,
     "categories": [
       "metal"
     ],
@@ -12,49 +12,49 @@
   },
   "crafting_items": {
     "main": {
-      "item": "beyondthevoid:tenebrae_ingot"
+      "item": "beyondthevoid:obsidian_netherite_alloy"
     }
   },
   "name": {
-    "text": "Tenebrae Ingot"
+    "text": "Obsidian-Netherite Alloy"
   },
   "stats": {
     "main": {
-      "durability": 4250,
-      "armor_durability": 80,
-      "enchantability": 17.0,
-      "rarity": 92,
+      "durability": 5000,
+      "armor_durability": 40.0,
+      "enchantability": 15.0,
+      "rarity": 85,
       "chargeability": 1.2,
-      "harvest_level": 5.0,
-      "harvest_speed": 12.0,
-      "melee_damage": 10.5,
+      "harvest_level": 4.0,
+      "harvest_speed": 10.0,
+      "melee_damage": 9.0,
       "magic_damage": 0.0,
-      "attack_speed": 0.2,
-      "ranged_damage": 1.2,
-      "ranged_speed": 1.2,
-      "armor": 30.0,
-      "armor_toughness": 15.0,
-      "magic_armor": 1.0,
+      "attack_speed": 0.05,
+      "ranged_damage": 1.0,
+      "ranged_speed": 1.0,
+      "armor": 26.0,
+      "armor_toughness": 12.0,
+      "magic_armor": 2.0,
       "knockback_resistance": 1.0
     }
   },
   "traits": {
     "main": [
       {
-        "name": "silentgear:sturdy",
+        "name": "silentgear:fiery",
         "level": 2
       },
       {
-        "name": "silentgear:chilled",
+        "name": "silentgear:flame_ward",
+        "level": 5
+      },
+      {
+        "name": "silentgear:fireproof",
+        "level": 1
+      },
+      {
+        "name": "silentgear:heavy",
         "level": 2
-      },
-      {
-        "name": "silentgear:ancient",
-        "level": 1
-      },
-      {
-        "name": "silentgear:adamant",
-        "level": 1
       }
     ]
   },
@@ -62,7 +62,7 @@
     "main/all": [
       {
         "texture": "silentgear:main_generic_hc",
-        "color": "#01004B"
+        "color": "#0d0b0b"
       },
       {
         "texture": "silentgear:_highlight"
@@ -71,7 +71,7 @@
     "main/fragment": [
       {
         "texture": "silentgear:metal",
-        "color": "#01004B"
+        "color": "#0d0b0b"
       }
     ]
   }
