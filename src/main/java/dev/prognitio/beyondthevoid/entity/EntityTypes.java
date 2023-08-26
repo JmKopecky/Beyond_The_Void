@@ -16,4 +16,11 @@ public class EntityTypes {
     public static final RegistryObject<EntityType<AncientKnight>> ANCIENT_KNIGHT = ENTITY_REGISTER.register("ancient_knight",
             () -> EntityType.Builder.of(AncientKnight::new, MobCategory.MONSTER).sized(2f, 3.75f)
                     .build(new ResourceLocation(BeyondTheVoid.MODID, "ancient_knight").toString()));
+
+
+    //idea for a creature with a ranged attack
+
+    //Idea for a magic caster
+
+    //necromancer: summon other enemies to fight for it.
 }

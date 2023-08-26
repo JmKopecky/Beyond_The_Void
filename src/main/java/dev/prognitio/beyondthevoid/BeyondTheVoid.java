@@ -25,10 +25,12 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.InterModComms;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
+import net.minecraftforge.fml.event.lifecycle.InterModEnqueueEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -79,6 +81,11 @@ public class BeyondTheVoid
             registerFlowers.addPlant(BlocksRegistry.REVITALIZED_SCULKLIGHT_ROSE.getId(), BlocksRegistry.POTTED_REVITALIZED_SCULKLIGHT_ROSE);
 
         });
+    }
+
+    @SubscribeEvent
+    public void interModEnqueueEvent(InterModEnqueueEvent event) {
+        //InterModComms.sendTo("");
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call

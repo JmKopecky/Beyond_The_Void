@@ -130,6 +130,9 @@ repositories {
     }
 
     maven {
+        url = "https://maven.theillusivec4.top/"
+    }
+    maven {
         // location of the maven that hosts JEI files
         name = "Progwml6 maven"
         url = "https://dvs1.progwml6.com/files/maven/"
@@ -155,6 +158,7 @@ repositories {
         url = uri("https://maven.pkg.github.com/silentchaos512/silent-utils")
         credentials gpr_creds
     }
+
 }
 
 dependencies {
@@ -191,6 +195,9 @@ dependencies {
     implementation fg.deobf("net.silentchaos512:silent-lib:1.19.2-7.0.3") {
         exclude module: "forge"
     }
+
+    runtimeOnly fg.deobf("top.theillusivec4.curios:curios-forge:1.19.2-5.1.1.0")
+    compileOnly fg.deobf("top.theillusivec4.curios:curios-forge:1.19.2-5.1.1.0:api")
 
 
 
