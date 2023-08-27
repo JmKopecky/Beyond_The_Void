@@ -1,13 +1,16 @@
 package dev.prognitio.beyondthevoid;
 
 import com.mojang.logging.LogUtils;
+import dev.prognitio.beyondthevoid.effects.ModEffects;
 import dev.prognitio.beyondthevoid.entity.EntityTypes;
 import dev.prognitio.beyondthevoid.entity.client.AncientKnightRenderer;
 import dev.prognitio.beyondthevoid.items.BlocksRegistry;
 import dev.prognitio.beyondthevoid.items.ItemsRegistry;
+import dev.prognitio.beyondthevoid.networking.Messages;
 import dev.prognitio.beyondthevoid.world.feature.ConfiguredFeatures;
 import dev.prognitio.beyondthevoid.world.feature.CustomFeatures;
 import dev.prognitio.beyondthevoid.world.feature.PlacedFeatures;
+import net.minecraft.client.KeyMapping;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.entity.SpawnPlacements;
@@ -22,6 +25,8 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.material.Material;
 import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.client.event.RegisterKeyMappingsEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -35,8 +40,11 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+import org.lwjgl.glfw.GLFW;
 import org.slf4j.Logger;
 import software.bernie.geckolib3.GeckoLib;
+import top.theillusivec4.curios.api.SlotTypeMessage;
+import top.theillusivec4.curios.api.SlotTypePreset;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(BeyondTheVoid.MODID)
@@ -47,6 +55,7 @@ public class BeyondTheVoid
     // Directly reference a slf4j logger
     private static final Logger LOGGER = LogUtils.getLogger();
 
+
     public BeyondTheVoid()
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
@@ -56,6 +65,7 @@ public class BeyondTheVoid
 
         GeckoLib.initialize();
 
+
         ItemsRegistry.ITEMS.register(modEventBus);
         BlocksRegistry.BLOCKS.register(modEventBus);
         BlocksRegistry.BLOCKITEMS.register(modEventBus);
@@ -63,6 +73,7 @@ public class BeyondTheVoid
         ConfiguredFeatures.CONFIG_FEATURES.register(modEventBus);
         PlacedFeatures.PLACED_FEATURES.register(modEventBus);
         EntityTypes.ENTITY_REGISTER.register(modEventBus);
+        ModEffects.EFFECTS.register(modEventBus);
 
 
 
@@ -81,12 +92,21 @@ public class BeyondTheVoid
             registerFlowers.addPlant(BlocksRegistry.REVITALIZED_SCULKLIGHT_ROSE.getId(), BlocksRegistry.POTTED_REVITALIZED_SCULKLIGHT_ROSE);
 
         });
+
+        Messages.register();
     }
 
     @SubscribeEvent
-    public void interModEnqueueEvent(InterModEnqueueEvent event) {
+    public void enqueueIMC(final InterModEnqueueEvent event) {
         //InterModComms.sendTo("");
+        /*
+        InterModComms.sendTo("curios", SlotTypeMessage.REGISTER_TYPE,
+                () -> SlotTypePreset.CURIO.getMessageBuilder().build());
+        InterModComms.sendTo("curios", SlotTypeMessage.REGISTER_TYPE,
+                () -> SlotTypePreset.CHARM.getMessageBuilder().build());
+         */
     }
+
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
     @SubscribeEvent

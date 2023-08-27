@@ -2,6 +2,9 @@ package dev.prognitio.beyondthevoid.items;
 
 import dev.prognitio.beyondthevoid.BeyondTheVoid;
 import dev.prognitio.beyondthevoid.entity.EntityTypes;
+import dev.prognitio.beyondthevoid.items.custom.curios.CharmOfAcceleration;
+import dev.prognitio.beyondthevoid.items.custom.curios.CharmOfTeleportation;
+import dev.prognitio.beyondthevoid.items.custom.curios.RingOfProjection;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.registries.DeferredRegister;
@@ -42,4 +45,14 @@ public class ItemsRegistry {
 
     public static final RegistryObject<Item> PRIMORDIAL_INGOT = ITEMS.register(
             "primordial_ingot", () -> new Item(new Item.Properties().tab(CreativeTabs.BEYONDTHEVOIDTAB)));
+
+    public static final RegistryObject<Item> RING_OF_PROJECTION = ITEMS.register(
+            "ring_of_projection", () -> new RingOfProjection(new Item.Properties().tab(CreativeTabs.BEYONDTHEVOIDTAB)));
+
+    public static final RegistryObject<Item> CHARM_OF_ACCELERATION = ITEMS.register(
+            "charm_of_acceleration", () -> new CharmOfAcceleration(new Item.Properties().tab(CreativeTabs.BEYONDTHEVOIDTAB)));
+
+    public static final RegistryObject<Item> CHARM_OF_TELEPORTATION = ITEMS.register(
+            "charm_of_teleportation", () -> new CharmOfTeleportation(new Item.Properties().tab(CreativeTabs.BEYONDTHEVOIDTAB)));
+
 }

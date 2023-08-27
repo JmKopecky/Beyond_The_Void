@@ -36,7 +36,15 @@
   "item.beyondthevoid.vitalizing_sap": "Vitalizing Sap",
   "item.beyondthevoid.raw_primordial_ingot": "Raw Primordial Ingot",
   "item.beyondthevoid.primordial_ingot": "Primordial Ingot",
+  "item.beyondthevoid.ring_of_projection": "§3Ring of Projection",
+  "item.beyondthevoid.charm_of_acceleration": "§3Charm of Acceleration",
+  "item.beyondthevoid.charm_of_teleportation": "§3Charm of Teleportation",
+  "effect.beyondthevoid.blade_projection": "Blade Projection",
+  "effect.beyondthevoid.ability_charging": "Ability Charging...",
   "itemGroup.beyond_the_void_tab": "Beyond The Void",
+
+  "key.category.beyondthevoid.beyondthevoid": "Beyond The Void",
+  "key.beyondthevoid.fire_ability_key": "Activate Ability",
 
   "entity.beyondthevoid.ancient_knight": "Ancient Knight"
 }
