@@ -1,6 +1,8 @@
 package dev.prognitio.beyondthevoid.items.custom.curios;
 
 import dev.prognitio.beyondthevoid.effects.ModEffects;
+import dev.prognitio.beyondthevoid.entity.EntityTypes;
+import dev.prognitio.beyondthevoid.entity.projectile.TeleportationProjectile;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.LivingEntity;
@@ -30,7 +32,9 @@ public class CharmOfTeleportation extends Item implements ICurioItem {
                 }
                 //activate ability
                 //create what is basically an ender pearl and shoot that.
-
+                TeleportationProjectile projectile = new TeleportationProjectile(EntityTypes.TELEPORTATION_PROJECTILE.get(), entity, entity.level);
+                projectile.shootFromRotation(entity, entity.getXRot(), entity.getYRot(), 0.0F, 5.0F, 1.0F);
+                entity.level.addFreshEntity(projectile);
 
                 entity.removeEffect(ModEffects.ABILITY_CHARGING_EFFECT.get());
                 //add cooldown
